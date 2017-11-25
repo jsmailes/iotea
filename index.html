@@ -1,0 +1,18 @@
+<html>
+<head>
+    <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <h>IOTea</h>
+    <form onsubmit="return submitValues($('#tempSlider').val(), $('#timeSlider').val());">
+        <p>Temperature:</p>
+        <input type="range" min="50" max="100" value="80" class="slider" id="tempSlider" name="tempSlider" for="tempBox" oninput="tempBox.value=tempSlider.value">
+        <input type="text" value="80" name="tempBox" for="tempSlider" oninput="tempSlider.value=tempBox.value">
+        <p>Brewing time:</p>
+        <input type="range" min="1" max="300" value="30" class="slider" id="timeSlider" name="timeSlider" for="timeBox" oninput="timeBox.value=timeSlider.value">
+        <input type="text" value="30" name="timeBox" for="timeSlider" oninput="timeSlider.value=timeBox.value">
+        <input type="submit" value="Go!">
+    </form>
+</body>
+</html>
